@@ -20,14 +20,18 @@ function calculate() {
     // ==========================================
     // Todo: Perform conversion calculations here
 
+    weightInKg = weight * 0.454;
+    heightInCm = height * 2.54;
+    heightInMeters = height * 0.0254;
+
     // -------------------------------
     // Body Surface Area (BSA)
     // -------------------------------
 
     var BSA = 0;
 
-    weightInKg = weight * 0.454;
-    heightInCm = height * 2.54;
+    // ==========================================
+    // Todo: Perform BSA calculation here
 
     numerator = heightInCm * weightInKg;
     denominator = 3600;
@@ -36,8 +40,6 @@ function calculate() {
 
     BSA = Math.sqrt(dividedNum);
 
-    // ==========================================
-    // Todo: Perform BSA calculation here
 
     // -------------------------------
     // Ideal Body Weight (IBW)
@@ -45,19 +47,17 @@ function calculate() {
 
     var IBW = 0;
 
+        // ==========================================
+        // Todo: Perform female IBW calculation here
     if ( female ) {
         IBW = 45.5 + 2.3 * (height - 60);
 
         // ==========================================
-        // Todo: Perform female IBW calculation here
-
+        // Todo: Perform male IBW calculation here
 
     } else if ( male ) {
 
         IBW = 50 + 2.3 * (height - 60);
-
-        // ==========================================
-        // Todo: Perform male IBW calculation here
 
     }
 
@@ -67,14 +67,12 @@ function calculate() {
 
     var BMI = 0;
 
-    weightInKg = weight * 0.454;
-    heightInMeters = height * 0.0254;
-
-    BMI = weightInKg / (Math.pow(heightInMeters, 2));
-
     // ==========================================
     // Todo: Perform BMI calculation here
 
+    heightInMeters = height * 0.0254;
+
+    BMI = weightInKg / (Math.pow(heightInMeters, 2));
 
 
     // Do not modify this function call
